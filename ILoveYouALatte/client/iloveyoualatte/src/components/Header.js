@@ -14,13 +14,15 @@ export default function Header() {
   }, [])
   
     return (
-      <div>
-        
+      <>
         <nav id="nav-bar">
-          <section>
+          <section id="rewards-number">
+            <div>
             {isLoggedIn ? drinkorders.length * 10 : <></>}
+            </div>
           </section>
-          {isLoggedIn &&
+          <section className="login-logout">
+            {isLoggedIn &&
             <ul className="loggedIn-nav">
               <li>
                 <Link to="/">Home</Link>
@@ -43,7 +45,8 @@ export default function Header() {
               </li>
             </ul>
           }
+          </section>
         </nav>
-      </div>
+      </>
     );
   }

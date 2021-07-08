@@ -6,3 +6,14 @@ ul {
     border: black 1px dotted;
 }
 
+#rewards-number {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.login-logout {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    
+}

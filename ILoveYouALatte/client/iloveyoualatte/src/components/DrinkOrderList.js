@@ -12,7 +12,7 @@ export const DrinkOrderList = () => {
 
   return (
         <div>
-          {drinkorders.map((order) => (
+          {drinkorders.slice(0).reverse().map((order) => (
             <>
               <Latte key={order.id} order={order} />
             </>
