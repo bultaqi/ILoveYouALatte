@@ -2,13 +2,25 @@ ul {
     list-style: none;
 }
 
+li {
+    margin: 0 1em;
+}
+
 #nav-bar {
     border: black 1px dotted;
+    background-color: black;
 }
 
 #rewards-number {
     display: flex;
     justify-content: flex-start;
+    background-color: blanchedalmond;
+}
+
+#rewards-points {
+    margin-left: 1em;
+    
+    
 }
 
 .login-logout {

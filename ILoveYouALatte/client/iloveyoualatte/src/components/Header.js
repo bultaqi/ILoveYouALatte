@@ -17,7 +17,7 @@ export default function Header() {
       <>
         <nav id="nav-bar">
           <section id="rewards-number">
-            <div>
+            <div id="rewards-points">
             {isLoggedIn ? drinkorders.length * 10 : <></>}
             </div>
           </section>
@@ -25,13 +25,13 @@ export default function Header() {
             {isLoggedIn &&
             <ul className="loggedIn-nav">
               <li>
-                <Link to="/">Home</Link>
+                <Link style={{ color: 'gold', textDecoration: 'none'}} to="/">Home</Link>
               </li>
               <li>
-                <Link to="/history">Order History</Link>
+                <Link style={{ color: 'gold', textDecoration: 'none'}} to="/history">Order History</Link>
               </li>
               <li>
-                <Link onClick={logout}>Logout</Link>
+                <Link style={{ color: 'gold', textDecoration: 'none'}} onClick={logout}>Logout</Link>
               </li>
             </ul>
           }

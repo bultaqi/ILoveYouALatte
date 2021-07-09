@@ -2,6 +2,7 @@
     border: 2px black dotted;
     display: grid;
     place-items: center;
+    
 }
 
 .loggedOut-nav, .loggedIn-nav {

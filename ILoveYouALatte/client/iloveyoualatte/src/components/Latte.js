@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import Login from "./Login";
+import "./Latte.css";
 // import { Link } from "react-router-dom";
 
 const Latte = ({ order }) => {
@@ -10,30 +11,30 @@ const Latte = ({ order }) => {
   
   
   return ( 
-    <section>
-        <div>
+    
+        <section className="order-history-div">
           {order.custId === customerId ? (
-            <>
-              <p>{order.drinkSize}</p>
-              <p>{order.hotOrIced}</p>
-              <p>{order.milkChoice}</p>
-              <p>{order.milkFoam}</p>
-              <p>{order.drinkSyrup}</p>
-              <p>{order.drinkSweetener}</p>
-              <p>{order.espressoShots}</p>
-              <p>{order.toppings}</p>
+            <div id="latte-order">
+              {order.drinkSize ? <p>{order.drinkSize}</p> : <></>}
+              {order.hotOrIced ? <p>{order.hotOrIced}</p> : <></>}
+              {order.milkChoice ? <p>{order.milkChoice}</p> : <></>}
+              {order.milkFoam ? <p>{order.milkFoam}</p> : <></>}
+              {order.drinkSyrup ? <p>{order.drinkSyrup}</p> : <></>}
+              {order.drinkSweetener ? <p>{order.drinkSweetener}</p> : <></>}
+              {order.espressoShots ? <p>{order.espressoShots}</p> : <></>}
+              {order.toppings ? <p>{order.toppings}</p> : <></>}
               <button onClick={() => {
                 history.push(`/delete/${order.id}`)
               }}>Delete Order</button>
               <button onClick={() => {
                 history.push(`/edit/${order.id}`)
               }}>Edit Order</button>
-            </>
+            </div>
           ) : (
            <Login />
           )}  
-        </div>
-    </section>
+        </section>
+
   );
 };
 
