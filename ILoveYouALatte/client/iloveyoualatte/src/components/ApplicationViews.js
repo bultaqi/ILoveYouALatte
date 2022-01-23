@@ -1,3 +1,4 @@
+// import "../index.css";
 import React, { useContext } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
@@ -13,6 +14,7 @@ export default function ApplicationViews() {
 
   return (
     <main>
+      
       <Switch>
         
         <Route path="/login">

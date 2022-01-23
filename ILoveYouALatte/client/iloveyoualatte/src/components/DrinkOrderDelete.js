@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider";
 
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import './DrinkOrderDelete.css';
 
@@ -11,10 +11,9 @@ export const DrinkOrderDelete = () => {
   const history = useHistory();
   const {orderId} = useParams();
 
-  console.log(orderId)
   useEffect(() => {
     getDrinkOrder(orderId).then(setOrder);
-  }, []);
+  }, [getDrinkOrder, orderId]);
 
   const handleDelete = () => {
     deleteDrinkOrder(order.id)

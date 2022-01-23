@@ -87,8 +87,9 @@ export const LatteForm = () => {
       } else {
         setIsLoading(false)
       }
-      }, [])
+      }, [drinkOrderId, getDrinkOrder])
 
+      // above I can use a empty dependency array if problems later...*noted jan/2022
 
     return (
      
